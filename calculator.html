@@ -1,44 +1,61 @@
+<!DOCTYPE html>
 <html>
+    <head>
     <title>
         MisterLs4566
     </title>
     <style>
     </style>
-    <head>
         <meta charset = "utf-8">
         <meta name=viewport content="width=device-width, initial-scale=1">
-        <h1>calculator</h1>
         <script>
+            function p()
+            {
+                console.log("prozentsatz");
+            };
+
+            function k()
+            {
+                console.log("Kredit");
+            };
+
+            function k2()
+            {
+                console.log("neuer Kredit");
+            };
+
+            function n()
+            {
+                console.log("neuer Kredit");
+            };
+            function clearInput()
+            {
+                p_wert=0.0;
+                k_wert=0.0;
+                k2_wert = 0.0;
+                n_wert = 0.0;
+                document.getElementById("p").value = "";
+                document.getElementById("k").value = "";
+                document.getElementById("k2").value = "";
+                document.getElementById("t").value = "";
+            };
         </script>
     </head>
     <body>
-        <br><input placeholder="Prozentsatz" onclick=p()></input></br>
-        <br><input placeholder="alter Wert" onclick=k()></input></br>
-        <br><input placeholder="neuer Wert" onclick=kneu()></input></br>
-        <br><input placeholder="Zeit" onclick=n()></input></br>
-        <br><input type="button", value="berechnen"> </input>
-        <input type="button", value="löschen"> </input></br>
-        <script>
-            var prozentsatz=0.0
-            var k=0.0
-            var kneu = 0.0
-            var n = 0.0
-            function p()
-            {
-                console.log("prozentsatz")
-            }
-            function k()
-            {
-                console.log("Kredit")
-            }
-            function kneu()
-            {
-                console.log("neuer Kredit")
-            }
-            function n()
-            {
-                console.log("Zeit")
-            }
+        <h1>calculator</h1>
+<div>
+        <br><input placeholder="Prozentsatz" value="" id="p"><br>
+        <br><input placeholder="alter Wert" value="" id="k"><br>
+        <br><input placeholder="neuer Wert" value="" id="k2"><br>
+        <br><input placeholder="Zeit" value="" id="t"><br>
+        <br><input type="button" value="berechnen" id="calc">
+        <input type="button" value="löschen" id="clear" onclick="clearInput()"></br>
+</div>
+<script>
+            var p_wert=0.0;
+            var k_wert=0.0;
+            var k2_wert = 0.0;
+            var n_wert = 0.0;
         </script>
     </body>
 </html>
