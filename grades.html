@@ -11,12 +11,18 @@
             {
                 document.getElementById("subjects").innerHTML+=Object.keys(subjects)[i];
                 document.getElementById("subjects").innerHTML+="<br>";
-                document.getElementById("subjects").innerHTML+=Object.values(subjects)[i];
+                document.getElementById("subjects").innerHTML+=Object.values(subjects)[i][0];
+                document.getElementById("subjects").innerHTML+="  "
+                document.getElementById("subjects").innerHTML+=Object.values(subjects)[i][1];
+                document.getElementById("subjects").innerHTML+="  "
+                if (Object.values(subjects)[i].length == 3)
+                {
+                    document.getElementById("subjects").innerHTML+=Object.values(subjects)[i][2];
+                }
                 if (Object.values(subjects)[i][0] != "/")
                 {
                     average += parseFloat(Object.values(subjects)[i][0]);
                     len+=1
-                    console.log(average)
                 }
                 document.getElementById("subjects").innerHTML+="<br>";
             }
