@@ -10,17 +10,20 @@
             for (var i=0; i < Object.keys(subjects).length; i++)
             {
                 document.getElementById("subjects").innerHTML+=Object.keys(subjects)[i];
-                document.getElementById("subjects").innerHTML+="<br>"
+                document.getElementById("subjects").innerHTML+="<br>";
                 document.getElementById("subjects").innerHTML+=Object.values(subjects)[i];
                 if (Object.values(subjects)[i][0] != "/")
                 {
-                    average += parseFloat(Object.values(subjects)[i][0])
+                    average += parseFloat(Object.values(subjects)[i][0]);
+                    len+=1
+                    console.log(average)
                 }
-                document.getElementById("subjects").innerHTML+="<br>"
+                document.getElementById("subjects").innerHTML+="<br>";
             }
-            average = average/parseFloat(Object.keys(subjects).length)
-            document.getElementById("subjects").innerHTML+="Notendurchschnitt: <br>"
-            document.getElementById("subjects").innerHTML+=average
+            console.log()
+            average = average/len;
+            document.getElementById("subjects").innerHTML+="Notendurchschnitt: <br>";
+            document.getElementById("subjects").innerHTML+=average;
         }
     </script>
     <style>
@@ -42,7 +45,7 @@
         </div>
         <script>
             var grades = 
-            {"Deutsch":["1", "/", "/"], 
+            {"Deutsch":["/", "/", "/"], 
             "Mathe":["/", "/", "/"], 
             "Englisch":["/", "/", "/"], 
             "Französisch":["/", "/", "/"], 
@@ -55,6 +58,7 @@
             "Informatik":["/", "/"], 
             "Politik und Wirtschaft":["/", "/"]};
             var average=0.0;
+            var len=0
             show_grades(grades, average);
         </script>
     </body>
