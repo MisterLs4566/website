@@ -11,10 +11,27 @@
                 {
                     if (Object.values(subjects)[i][0] != "/")
                     {
-                    document.getElementById("subjects").innerHTML+=Object.keys(subjects)[i];
-                    document.getElementById("subjects").innerHTML+=":     ";
-                    document.getElementById("subjects").innerHTML+=Object.values(subjects)[i][0];
-                    document.getElementById("subjects").innerHTML+="<br><br>";
+                        if (Object.values(subjects)[i][1].split(" ") != date)
+                        {
+                            document.getElementById("subjects").innerHTML+=Object.keys(subjects)[i];
+                            document.getElementById("subjects").innerHTML+=":     ";
+                            document.getElementById("subjects").innerHTML+=Object.values(subjects)[i][0];
+                            if (Object.values(subjects)[i][1].split(" ")[1] == date[1])
+                            {
+                                document.getElementById("subjects").innerHTML+=" in ";
+                                var difference = parseInt(Object.values(subjects)[i][1].split(" ")[2])-parseInt(date[2]);
+                                document.getElementById("subjects").innerHTML+= difference;
+                                if (difference == 1)
+                                {
+                                    document.getElementById("subjects").innerHTML+=" Tag";
+                                }
+                                else
+                                {
+                                    document.getElementById("subjects").innerHTML+=" Tagen";
+                                }
+                            }
+                            document.getElementById("subjects").innerHTML+="<br><br>";
+                        }
                     }
                 }
             }
@@ -36,13 +53,10 @@
         <div class="subjects" id="subjects">
         </div>
         <script>
-            var date = new Date().toDateString();
-            date = date.split(" ")
+            var date = new Date().toDateString().split(" ");
             console.log(date)
             var subjects = 
-            {"Religion": ["29.10.2021", "Fri Oct 29 2021".split(" ")],
-            "Deutsch": ["01.1.2050", "Sa Jan 1 2050"],
-            "Mathe ": ["01.5.2080", "Sa May 1 2080"]};   
+            {"Religion": ["29.10.2021", "Fri Oct 29 2021"]};   
             write_dates(subjects, date)
         </script>
     </body>
