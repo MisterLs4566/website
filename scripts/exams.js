@@ -30,9 +30,8 @@ function write_dates(subjects, date)
 }
 var date = new Date().toDateString().split(" ");
 console.log(date);
-var subjects = {"Französisch": ["8.11.2021 (Montag)", "Mon Nov 8 2021"],
-                "Mathe":["9.11.2021 (Dienstag)", "Tue Nov 9 2021"],
-                "Geschichte": ["15.11.2021 (Montag)", "Mon Nov 15 2021"],
+var subjects = {"Geschichte": ["15.11.2021 (Montag)", "Mon Nov 15 2021"],
+                "Mathe":["16.11.2021 (Dienstag)", "Tue Nov 16 2021"],
                 "Englisch": ["22.11.2021 (Montag)", "Mon Nov 22 2021"],
                 "Darstellendes Spiel": ["24.11.2021 (Mittwoch)", "Wed Nov 24 2021"],
                 "Physik": ["29.11.2021 (Montag)", "Mon Nov 29 2021"],
