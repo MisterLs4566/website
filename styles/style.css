@@ -48,3 +48,22 @@ a{
 .calculate-button{
     width: 30%; 
     height: 35px;}
+
+.schedule
+{
+    width: 100%; 
+    height: 100%; 
+    font-size: 200%;
+    color: rgb(255, 255, 255); 
+    text-align: center;
+}
+
+th
+{
+    color:rgb(0, 0, 0);
+}
+
+b
+{
+    color:rgb(0, 0, 0);
+}
