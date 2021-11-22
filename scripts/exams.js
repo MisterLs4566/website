@@ -16,11 +16,11 @@ function write_dates(subjects, date)
                     document.getElementById("subjects").innerHTML+= difference;
                     if (difference == 1)
                     {
-                        document.getElementById("subjects").innerHTML+=" Tag";
+                        document.getElementById("subjects").innerHTML+=" day";
                     }
                     else
                     {
-                        document.getElementById("subjects").innerHTML+=" Tagen";
+                        document.getElementById("subjects").innerHTML+=" days";
                     }
                 }
                 document.getElementById("subjects").innerHTML+="<br><br>";
