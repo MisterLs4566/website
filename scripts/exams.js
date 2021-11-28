@@ -34,5 +34,8 @@ var subjects = {"Physik": ["29.11.2021 (Montag)", "Mon Nov 29 2021"],
                 "Informatik": ["30.11.2021 (Dienstag)", "Tue Nov 30 2021"],
                 "Englisch": ["6.12.2021 (Montag)", "Mon Dec 6 2021"],
                 "Biologie": ["10.12.2021 (Freitag)", "Fri Dec 10 2021"],
-                "Französisch": ["20.12.2021 (Montag)", "Mon Dec 20 2021"]}   
+                "Powi": ["15.12.2021 (Mittwoch)", "Wed Dec 15 2021"],
+                "Chemie": ["16.12.2021 (Donnerstag)", "Thu Dec 16 2021"],
+                "Französisch": ["20.12.2021 (Montag)", "Mon Dec 20 2021"],
+                "Deutsch": ["21.12.2021 (Dienstag)", "Di Dec 21 2021"]}   
 write_dates(subjects, date)
