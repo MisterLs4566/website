@@ -30,5 +30,9 @@ function write_dates(subjects, date)
 }
 var date = new Date().toDateString().split(" ");
 console.log(date);
-var subjects = {}   
+var subjects = {};
+if (subjects.length==0)
+{
+    alert("Es stehen zurzeit keine Klausuren an")
+}
 write_dates(subjects, date)
